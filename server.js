@@ -11,7 +11,7 @@ let PORT = process.env.PORT || 3500;
 let app = express();
 
 app.use(compression());
-app.use(express.urlencoded({ extended: true }));
+app use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Hosting static files so css and js files can be retrieved
@@ -23,10 +23,7 @@ app.use(express.static("public"));
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/budgettracker',
   {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    useFindAndModify: false
+    useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false
   }
 );
 
